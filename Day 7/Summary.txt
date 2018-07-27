@@ -1,0 +1,10 @@
+27th July 2018
+
+1. Exception handling
+	a. JVM, processor, API
+	b. try, catch, finally, throw, throws
+2. Checked/ Unchecked
+3.Collections
+	a. List
+	b. Set
+	c. Map
