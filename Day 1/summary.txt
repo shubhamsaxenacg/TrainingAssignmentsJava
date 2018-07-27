@@ -1,0 +1,9 @@
+18th July 2018
+
+
+Learned basics of java
+
+1. Language constructs
+2. data types
+3. Arrays
+4. Reference/Objects

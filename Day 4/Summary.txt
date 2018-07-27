@@ -1,0 +1,4 @@
+23rd July 2018
+
+1. Inheritence
+2. Composition (has-A)

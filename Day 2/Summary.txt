@@ -1,0 +1,5 @@
+19th July 2018
+
+1. Objects
+2. Classes
+3. Static final
