@@ -1,8 +1,12 @@
 package com.cg.collections;
 
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -62,7 +66,7 @@ public class TestCollection {
 		Set<Laptop>laptop1 = new HashSet<>();
 		System.out.println("");
 		laptop1.add(new Laptop("HP","2.0","windows 10", "I3"));
-		laptop1.add(new Laptop("HP","2.0","windows 10", "I3"));
+		laptop1.add(new Laptop("HP","2.0","windows 17", "I3"));
 		laptop1.add(new Laptop("dell","2.6","windows 8", "I1"));
 		
 		laptop1.stream().forEach((lapt) -> System.out.println(lapt));
@@ -79,7 +83,7 @@ public class TestCollection {
 		student.stream().forEach((stu) -> System.out.println(stu));
 		
 		
-		
+	//.........TreeSet for student
 		Set<Student>student1 = new TreeSet<Student>();
 		System.out.println("");
 		student1.add(new Student(2, "Shubham"));
@@ -89,7 +93,7 @@ public class TestCollection {
 		student1.stream().forEach((stud) -> System.out.println(stud));
 		
 		
-		
+	//.........TreeSet for Car where make is compared
 		Set<Car>car1 = new TreeSet<Car>();
 		System.out.println("");
 		car1.add(new Car("m","Maruti","2018","1_000_000"));
@@ -97,6 +101,29 @@ public class TestCollection {
 		car1.add(new Car("chevrolet","Impala","2010","9_000_000"));
 		
 		car1.stream().forEach((ca) -> System.out.println(ca));
+		
+		
+	//........Hashmap for student and favouritefruit	
+		Map<Student,String>studentHash = new HashMap<>();
+		System.out.println("");
+		studentHash.put(new Student(1,"Shubham"), "Mango");
+		studentHash.put(new Student(2,"Sam"), "Grapes");
+		studentHash.put(new Student(3,"Ron"), "apple");
+		
+		System.out.println(studentHash);
+		Student studentMap = new Student(3, "Ron"); 
+		System.out.println(studentHash.get(studentMap));
+	
+	//.........Traversing using entryset............
+		Set<Entry<Student, String>> studentSet = studentHash.entrySet();
+		studentSet.stream().forEach((Entry e) -> System.out.println(e.getKey()+ " "+e.getValue()));
+		
+	//........Traversing using keyset..........
+		Set<Student> keyStudent = studentHash.keySet();
+		for(Student key: keyStudent) {
+			System.out.println("key: "+key+" Value: "+studentHash.get(key));
+		}
 	}
+
 
 }

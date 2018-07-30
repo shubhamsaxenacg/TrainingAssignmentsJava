@@ -1,5 +1,8 @@
 package com.cg.collections;
 
+//overrides hashcode and equals function
+
+
 public class Laptop {
 	String company;
 	String model;
@@ -26,8 +29,6 @@ public class Laptop {
 		int result = 1;
 		result = prime * result + ((company == null) ? 0 : company.hashCode());
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
-		result = prime * result + ((operatingSystem == null) ? 0 : operatingSystem.hashCode());
-		result = prime * result + ((processor == null) ? 0 : processor.hashCode());
 		return result;
 	}
 
@@ -50,16 +51,7 @@ public class Laptop {
 				return false;
 		} else if (!model.equals(other.model))
 			return false;
-		if (operatingSystem == null) {
-			if (other.operatingSystem != null)
-				return false;
-		} else if (!operatingSystem.equals(other.operatingSystem))
-			return false;
-		if (processor == null) {
-			if (other.processor != null)
-				return false;
-		} else if (!processor.equals(other.processor))
-			return false;
+
 		return true;
 	}
 }

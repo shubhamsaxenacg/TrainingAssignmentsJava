@@ -1,5 +1,9 @@
 package com.cg.collections;
 
+
+//.........overrides hashCode() and equals()
+//.....equality set is city, name and schoolDistrict
+
 public class School {
 	String name;
 	String city;
@@ -22,7 +26,7 @@ public class School {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((city == null) ? 0 : city.hashCode());
-		result = prime * result + greatSchoolRanking;
+//		result = prime * result + greatSchoolRanking;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((schoolDistrict == null) ? 0 : schoolDistrict.hashCode());
 		return result;
@@ -41,8 +45,8 @@ public class School {
 				return false;
 		} else if (!city.equals(other.city))
 			return false;
-		if (greatSchoolRanking != other.greatSchoolRanking)
-			return false;
+//		if (greatSchoolRanking != other.greatSchoolRanking)
+//			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;

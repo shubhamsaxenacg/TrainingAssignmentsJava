@@ -1,5 +1,8 @@
 package com.cg.collections;
 
+//.........overrides hashCode() and equals()
+//.....equality set is company, type, and price
+
 public class Television {
 	String company;
 	String type;
@@ -23,7 +26,7 @@ public class Television {
 		int result = 1;
 		result = prime * result + ((company == null) ? 0 : company.hashCode());
 		result = prime * result + price;
-		result = prime * result + (threeDEnabled ? 1231 : 1237);
+//		result = prime * result + (threeDEnabled ? 1231 : 1237);
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
@@ -43,8 +46,8 @@ public class Television {
 			return false;
 		if (price != other.price)
 			return false;
-		if (threeDEnabled != other.threeDEnabled)
-			return false;
+//		if (threeDEnabled != other.threeDEnabled)
+//			return false;
 		if (type == null) {
 			if (other.type != null)
 				return false;

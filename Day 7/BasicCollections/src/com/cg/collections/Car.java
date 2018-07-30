@@ -1,5 +1,9 @@
 package com.cg.collections;
 
+
+//overiddes compareTo function where it checks make of the car
+// implements Comparable
+
 public class Car implements Comparable<Car> {
 	String make;
 	String model;
@@ -25,8 +29,8 @@ public class Car implements Comparable<Car> {
 		int result = 1;
 		result = prime * result + ((make == null) ? 0 : make.hashCode());
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
-		result = prime * result + ((price == null) ? 0 : price.hashCode());
-		result = prime * result + ((year == null) ? 0 : year.hashCode());
+//		result = prime * result + ((price == null) ? 0 : price.hashCode());
+//		result = prime * result + ((year == null) ? 0 : year.hashCode());
 		return result;
 	}
 
@@ -49,16 +53,7 @@ public class Car implements Comparable<Car> {
 				return false;
 		} else if (!model.equals(other.model))
 			return false;
-		if (price == null) {
-			if (other.price != null)
-				return false;
-		} else if (!price.equals(other.price))
-			return false;
-		if (year == null) {
-			if (other.year != null)
-				return false;
-		} else if (!year.equals(other.year))
-			return false;
+
 		return true;
 	}
 
