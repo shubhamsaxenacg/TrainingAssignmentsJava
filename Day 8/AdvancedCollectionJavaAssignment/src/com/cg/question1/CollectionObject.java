@@ -35,7 +35,7 @@ public class CollectionObject {
 		 
 		 ArrayList<SavingAccount> savingAcc = new ArrayList<SavingAccount>(Arrays.asList(saving));
 		 savingAcc.stream().forEach((sa) -> System.out.println(sa));
-		 
+		 scanner.close();
 	 }
  
 }

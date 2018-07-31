@@ -40,7 +40,8 @@ public class SavingAccount {
 	}
 	
 	public int withdraw(int amount) {
-		acc_balance = acc_balance - amount;
+		if(amount<acc_balance)
+			acc_balance = acc_balance - amount;
 		return acc_balance;
 	}
 	
